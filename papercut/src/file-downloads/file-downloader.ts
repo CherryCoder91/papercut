@@ -1,13 +1,15 @@
+import { FileInformation } from "./file-information.js";
+
 export class FileDownloader {
 
-    public download(): void {
+    public download(file: FileInformation): void {
         const link = document.createElement("a");
 
-        const file = new Blob(['Hello from papercut'], { type: 'text/plain' });
+        const fileBlob = new Blob(file.fileContents, { type: file.fileType });
 
-        link.href = URL.createObjectURL(file);
+        link.href = URL.createObjectURL(fileBlob);
 
-        link.download = "papercut.txt";
+        link.download = `${file.filename}.${file.fileExtension}`;
 
         link.click();
         URL.revokeObjectURL(link.href);
