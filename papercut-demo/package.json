@@ -1,0 +1,24 @@
+{
+  "name": "papercut-demo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 public/**/*.html public/**/*.css dist/",
+    "build": "npm run clean && npm run copy-files && webpack",
+    "serve": "webpack serve --mode development",
+    "link:papercut": "npm link ../papercut",
+    "unlink:papercut": "npm unlink ../papercut"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "html-webpack-plugin": "^5.6.0",
+    "rimraf": "^6.0.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}

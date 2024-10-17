@@ -1,0 +1,28 @@
+{
+  "name": "papercut",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "npm run clean && tsc",
+    "build:watch": "npm run clean && tsc -w",
+    "test": "wtr --node-resolve",
+    "test:watch": "wtr --node-resolve --watch",
+    "test:coverage": "wtr --node-resolve --coverage"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@types/chai": "^4.3.19",
+    "@types/mocha": "^10.0.8",
+    "@web/dev-server-esbuild": "^1.0.2",
+    "@web/test-runner": "^0.19.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
+  }
+}
