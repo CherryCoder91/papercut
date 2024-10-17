@@ -1,4 +1,5 @@
-type FileType = 'text/plain' | 'application/pdf';
+import { FileContents } from "./file-contents.js";
+import { FileType } from "./file-type.js";
 
 export class FileInformation {
 
@@ -6,6 +7,6 @@ export class FileInformation {
         public filename: string,
         public fileExtension: string,
         public fileType: FileType,
-        public fileContents: BlobPart[]
+        public fileContents: FileContents
     ) { }
 }

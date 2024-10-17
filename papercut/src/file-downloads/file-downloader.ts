@@ -1,4 +1,4 @@
-import { FileInformation } from "./file-information.js";
+import { FileInformation } from "../types/file-information.js";
 
 export class FileDownloader {
 

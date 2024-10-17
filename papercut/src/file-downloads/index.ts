@@ -1,2 +1,2 @@
 export * from './file-downloader.js';
-export * from './file-information.js';
+export * from '../types/file-information.js';
